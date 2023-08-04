@@ -8,4 +8,13 @@ display(l_data.printSchema())
 
 # COMMAND ----------
 
-l_data.write.saveAsTable("loans")
+l_data.write.mode("overwrite").saveAsTable("loans")
+
+# COMMAND ----------
+
+# MAGIC %sql 
+# MAGIC select count(*) from loans
+
+# COMMAND ----------
+
+
